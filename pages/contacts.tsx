@@ -90,7 +90,7 @@ export default function Contacts() {
           className="fixed inset-0 z-10 overflow-y-auto"
           onClose={closeModal}
         >
-          <div className="min-h-screen px-4 text-center pt-4">
+          <div className="min-h-screen px-4 text-center pt-5">
             <Transition.Child
               as={Fragment}
               enter="ease-out duration-300"
