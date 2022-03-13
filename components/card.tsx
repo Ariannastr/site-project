@@ -1,5 +1,5 @@
 import cn from "classnames";
-import styles from "./Card.module.css";
+import styles from "./card.module.css";
 
 
 export default function Card({ title, fbLink, instagramLink, image, text, iconS } : any){
