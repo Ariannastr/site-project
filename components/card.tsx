@@ -2,7 +2,7 @@ import classNames from "classnames";
 import styles from "./Card.module.css";
 
 
-export default function Card({ title, fbLink, instagramLink, image, text, iconS }){
+export default function Card({ title, fbLink, instagramLink, image, text, iconS } : any){
   return (
     <div className={classNames([styles.wrapper, styles.wrapperAnime])}>
       <div className={styles.header}>

@@ -7,7 +7,7 @@ import Navbar from './navbar'
 const name = 'Arianna St'
 export const siteTitle = 'Nucleo Cinofilo da Soccorso Agata'
 
-export default function Layout({ children, home }) {
+export default function Layout({ children, home }: any) {
   return (
     <div className={styles.container}>  
       <Head>

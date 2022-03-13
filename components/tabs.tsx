@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Tabs({ title, text }) {
+export default function Tabs({ title, text }: any) {
   const [openTab, setOpenTab] = React.useState(1);
   return (
     <>
@@ -73,11 +73,11 @@ export default function Tabs({ title, text }) {
               <div className="tab-content tab-space">
                 <div className={openTab === 1 ? "block" : "hidden"} id="link1">
                   
-                  {text[0].tab.map(function(d){
+                  {text[0].tab.map(function(d:any){
                       return (
                         <>
                       <p>{d.text}</p><br/>
-                      {d.images.map(i => (<div className="aspect-w-auto aspect-h-auto" style={{display:"inline-block"}}>
+                      {d.images.map((i:any) => (<div className="aspect-w-auto aspect-h-auto" style={{display:"inline-block"}}>
                         <img width={300} height={200} style={{marginRight:"5px", verticalAlign:"middle", height:"100%"}} src={i}></img></div>))}
                       </>
                       )
@@ -85,22 +85,22 @@ export default function Tabs({ title, text }) {
                   
                 </div>
                 <div className={openTab === 2 ? "block" : "hidden"} id="link2">
-                  {text[1].tab.map(function(d){
+                  {text[1].tab.map(function(d:any){
                     return (
                       <>
                     <p>{d.text}</p><br/>
-                    {d.images.map(i => (<div className="aspect-w-auto aspect-h-auto" style={{display:"inline-block"}}>
+                    {d.images.map((i:any) => (<div className="aspect-w-auto aspect-h-auto" style={{display:"inline-block"}}>
                         <img width={300} height={200} style={{marginRight:"5px", verticalAlign:"middle", height:"100%"}} src={i}></img></div>))}
                       </>
                       )
                       })}
                 </div>
                 <div className={openTab === 3 ? "block" : "hidden"} id="link3">
-                  {text[2].tab.map(function(d){
+                  {text[2].tab.map(function(d:any){
                       return (
                         <>
                       <p>{d.text}</p><br/>
-                      {d.images.map(i => (<div className="aspect-w-auto aspect-h-auto" style={{display:"inline-block"}}>
+                      {d.images.map((i:any) => (<div className="aspect-w-auto aspect-h-auto" style={{display:"inline-block"}}>
                         <img width={300} height={200} style={{marginRight:"5px", verticalAlign:"middle", height:"100%"}} src={i}></img></div>))}
                       </>
                       )

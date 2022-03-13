@@ -7,7 +7,7 @@ import path from 'path';
 import Gallery from 'react-photo-gallery-react17';
 import Carousel, { Modal, ModalGateway } from 'react-images';
 
-function GalleryS(props) {
+function GalleryS(props:any) {
   const [currentImage, setCurrentImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
 
@@ -35,7 +35,7 @@ function GalleryS(props) {
             <Modal onClose={closeLightbox}>
               <Carousel
                 currentIndex={currentImage}
-                views={props.photos.map(x => ({
+                views={props.photos.map((x:any) => ({
                   ...x,
                   srcset: x.srcSet,
                   caption: x.title
