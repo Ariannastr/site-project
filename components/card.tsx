@@ -1,10 +1,10 @@
-import classNames from "classnames";
+import cn from "classnames";
 import styles from "./Card.module.css";
 
 
 export default function Card({ title, fbLink, instagramLink, image, text, iconS } : any){
   return (
-    <div className={classNames([styles.wrapper, styles.wrapperAnime])}>
+    <div className={cn([styles.wrapper, styles.wrapperAnime])}>
       <div className={styles.header}>
       {image == "" && iconS !== "" ? 
           iconS:
@@ -15,7 +15,7 @@ export default function Card({ title, fbLink, instagramLink, image, text, iconS 
         
         <div className={styles.badgeWrapper}>
         {fbLink === "" ? null : <div
-            className={classNames([styles.dangerBadge, styles.badgeAnime])}
+            className={cn([styles.dangerBadge, styles.badgeAnime])}
           >
             <a href={fbLink} target="_blank" type="button" className="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
               <svg aria-hidden="true"
@@ -35,7 +35,7 @@ export default function Card({ title, fbLink, instagramLink, image, text, iconS 
             </a>
           </div>}
           {instagramLink === "" ? null : <div
-            className={classNames([styles.primaryBadge, styles.badgeAnime])}
+            className={cn([styles.primaryBadge, styles.badgeAnime])}
           >
             <a href={instagramLink} target="_blank" type="button" className="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
               <svg aria-hidden="true"
