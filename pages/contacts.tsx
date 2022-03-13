@@ -25,7 +25,7 @@ export default function Contacts() {
       <Head>
         <title>Contatti - NCS Agata</title>
       </Head>
-      <div className="aspect-w-11 aspect-h-4">
+      <div className="aspect-w-10 aspect-h-4">
         <Image layout='fill' src="/img/contact-bg.jpg" className="max-w-full h-auto shadow-lg" alt=""/>
         <div className="absolute w-full py-2.5 top-12 inset-x-0 text-orange-500 text-xl text-center leading-4">
           <h2 className="font-extrabold leading-tight text-5xl">Contatti</h2>
@@ -90,7 +90,7 @@ export default function Contacts() {
           className="fixed inset-0 z-10 overflow-y-auto"
           onClose={closeModal}
         >
-          <div className="min-h-screen px-4 text-center">
+          <div className="min-h-screen px-4 text-center pt-4">
             <Transition.Child
               as={Fragment}
               enter="ease-out duration-300"
