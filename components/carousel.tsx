@@ -60,7 +60,7 @@ export default function Carousel({featuredProducts, label}: any) {
         
       <div className="carousel-item active relative float-left w-full"></div>
         <div className="aspect-w-10 aspect-h-5 ">
-          <Image src={featuredProducts && featuredProducts.length>0? featuredProducts[currentIndex] : "/img/foto_home/campo.jpeg"} alt="" layout="fill" />
+          <Image priority src={featuredProducts && featuredProducts.length>0? featuredProducts[currentIndex] : "/img/foto_home/campo.jpeg"} alt="" layout="fill" />
           <div className="carousel-caption pt-5 hidden md:block absolute text-center text-white	" style={{top:"65%", height:"fit-content"}}>
             <h5 className="text-5xl font-bold	">{label && label.length >0 && label[currentIndex]?  label[currentIndex].title : ""}</h5>
             <p className="pt-3">{label && label.length> 0 && label[currentIndex] ? label[currentIndex].text : ""}</p>
