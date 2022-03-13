@@ -21,7 +21,7 @@ export default function Instructors() {
       <div className="text-center px-16">
         <h1 className="font-semibold leading-tight text-5xl">Istruttori</h1>
         <h4 className="font-normal leading-tight text-2xl">Di seguito gli istruttori abilitati del gruppo</h4><br/>
-        <div style={{display:"flex"}}>
+        <div className='card-container'>
           <Card
               iconS={""}
               key={"card1"}

@@ -35,7 +35,7 @@ export default function Contacts() {
       </div>
       <br/>
       <div className="text-center px-16">
-        <div style={{display:"flex"}}>
+        <div className='card-container'>
           <Card
               iconS={<FaMapMarkedAlt size={50}/>}
               key={"card1"}
@@ -66,7 +66,7 @@ export default function Contacts() {
             </div>
             <br/><hr/><br/>
             <div className='text-center'>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11396.47082285048!2d8.9320357!3d44.4307477!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xddfaadd6cbbbabe4!2sNucleo%20Cinofilo%20da%20Soccorso%20Agata!5e0!3m2!1sit!2sit!4v1647032326575!5m2!1sit!2sit" width="600" height="450" style={{border:"0", display:"inline"}} allowFullScreen={true} loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11396.47082285048!2d8.9320357!3d44.4307477!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xddfaadd6cbbbabe4!2sNucleo%20Cinofilo%20da%20Soccorso%20Agata!5e0!3m2!1sit!2sit!4v1647032326575!5m2!1sit!2sit" width="600" height="450" style={{border:"0", display:"inline", width:"100%"}} allowFullScreen={true} loading="lazy"></iframe>
             </div>
             <br/><hr/><br/>
             <h1 className="font-bold leading-tight text-5xl">5x1000</h1>

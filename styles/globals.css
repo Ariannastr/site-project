@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+.card-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.iframe_mobile{
+  max-width: "100%"!important;
+  
+}
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 800px) {
+  .card-container {
+    flex-direction: column;
+  }
+  .iframe_mobile{
+    max-width: "100%"!important;
+    width: 20em;
+  }
+}
+
 .content_bg {
   background-image: url('../public/img/orange-brick.jpg');
   background-size: cover;

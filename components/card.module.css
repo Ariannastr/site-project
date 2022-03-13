@@ -1,5 +1,14 @@
 .wrapper {
     @apply bg-white hover:bg-orange-100 shadow-xl hover:shadow-none w-80 rounded-3xl flex flex-col items-center justify-center;
+    max-width: 15em;
+  }
+
+  @media (max-width: 800px) {
+    .card_wrapper__KtPNX {
+      @apply bg-white hover:bg-orange-100 shadow-xl hover:shadow-none w-80 rounded-3xl flex flex-col items-center justify-center;
+      width: "auto"!important;
+      
+    }
   }
   
   .wrapperAnime {
