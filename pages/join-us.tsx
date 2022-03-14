@@ -16,7 +16,7 @@ export default function JoinUs() {
       <div className="aspect-w-10 aspect-h-6">
         <Image layout='fill' src="/img/gruppo_giallo.jpeg" className="max-w-full h-auto shadow-lg" alt=""/>
         <div className="absolute w-full py-2.5  inset-x-0 text-orange-500 text-xl text-center leading-4">
-          <h2 className="font-extrabold leading-tight text-5xl">Unisciti a Noi</h2>
+          <h2 className="font-extrabold leading-tight text-5xl mobile-header">Unisciti a Noi</h2>
         </div>
 
       </div>

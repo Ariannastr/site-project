@@ -25,7 +25,7 @@ export default function Contacts() {
       <Head>
         <title>Contatti - NCS Agata</title>
       </Head>
-      <div className="aspect-w-10 aspect-h-4">
+      <div className="aspect-w-10 aspect-h-5">
         <Image layout='fill' src="/img/contact-bg.jpg" className="max-w-full h-auto shadow-lg" alt=""/>
         <div className="absolute w-full py-2.5 top-12 inset-x-0 text-orange-500 text-xl text-center leading-4">
           <h2 className="font-extrabold leading-tight text-5xl">Contatti</h2>
