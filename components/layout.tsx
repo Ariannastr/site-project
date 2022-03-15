@@ -1,10 +1,7 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from './layout.module.css'
-import Link from 'next/link'
 import Navbar from './navbar'
 
-const name = 'Arianna St'
 export const siteTitle = 'Nucleo Cinofilo da Soccorso Agata'
 
 export default function Layout({ children, home }: any) {
@@ -28,7 +25,8 @@ export default function Layout({ children, home }: any) {
       <header className="sticky top-0 z-50">
         <Navbar />
       </header>
-      <main className='relative'>{children}</main>
+      <main className='relative'>{children}
+      </main>
       <footer className="text-center bg-gray-900 text-white">
         <div className="text-center  px-6 pt-6">
           <div className="flex justify-center mb-6">

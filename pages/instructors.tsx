@@ -30,30 +30,28 @@ export default function Instructors() {
               fbLink={"https://www.facebook.com/mercedesfarina76"}
               text="Addestratore ENCI sezione 1, Istruttore e figurante Fedics per cani da soccorso in superficie e macerie, conduttore unitá cinofile da soccorso."
               image={"/img/mercedes2.jpeg"}
-            />
-            <Card
-              iconS={""}
-              key={"card2"}
-              title={"Valentina Guglielmetti"}
-              instagramLink={"https://instagram.com/guglielmetti.valentina"}
-              fbLink={"https://www.facebook.com/guglielmettivalentina"}
-              text="Addestratore ENCI sezione 1, Istruttore e figurante Fedics per cani da soccorso in superficie e macerie, conduttore unitá cinofile da soccorso."
-              image={"/img/valentina.jpeg"}
-            />
-            <Card
-              iconS={""}
-              key={"card3"}
-              title={"Roberta Bottaro"}
-              instagramLink={"https://instagram.com/roberta_bottaro"}
-              fbLink={"https://www.facebook.com/robertabottaro.k9"}
-              text="Addestratore ENCI sezioni 1 e 3, Istruttore e conduttore unitá cinofile mantrailing e detection. Psicologa, criminologa e pedagogista, ha collaborato con il Laboratorio di Cognizione Animale dell’Università di Trieste dove ha partecipato a diversi studi riguardanti l’olfatto del cane."
-              image={"/img/roberta.jpeg"}
-            />
-            </div>
-            <br/>
+          />
+          <Card
+            iconS={""}
+            key={"card2"}
+            title={"Valentina Guglielmetti"}
+            instagramLink={"https://instagram.com/guglielmetti.valentina"}
+            fbLink={"https://www.facebook.com/guglielmettivalentina"}
+            text="Addestratore ENCI sezione 1, Istruttore e figurante Fedics per cani da soccorso in superficie e macerie, conduttore unitá cinofile da soccorso."
+            image={"/img/valentina.jpeg"}
+          />
+          <Card
+            iconS={""}
+            key={"card3"}
+            title={"Roberta Bottaro"}
+            instagramLink={"https://instagram.com/roberta_bottaro"}
+            fbLink={"https://www.facebook.com/robertabottaro.k9"}
+            text="Addestratore ENCI sezioni 1 e 3, Istruttore e conduttore unitá cinofile mantrailing e detection. Psicologa, criminologa e pedagogista, ha collaborato con il Laboratorio di Cognizione Animale dell’Università di Trieste dove ha partecipato a diversi studi riguardanti l’olfatto del cane."
+            image={"/img/roberta.jpeg"}
+          />
+        </div>
+        <br/>
       </div>
-      
-      
     </Layout>
   )
 }

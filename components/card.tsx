@@ -6,17 +6,17 @@ export default function Card({ title, fbLink, instagramLink, image, text, iconS 
   return (
     <div className={cn([styles.wrapper, styles.wrapperAnime])}>
       <div className={styles.header}>
-      {image == "" && iconS !== "" ? 
-          iconS:
-          <div className={styles.imageWrapper}>
-            <img src={image} className={styles.image} alt="" />
-        </div>
+        {image == "" && iconS !== "" ? 
+            iconS:
+            <div className={styles.imageWrapper}>
+              <img src={image} className={styles.image} alt="" />
+            </div>
         }
         
         <div className={styles.badgeWrapper}>
-        {fbLink === "" ? null : <div
+          {fbLink === "" ? null : <div
             className={cn([styles.dangerBadge, styles.badgeAnime])}
-          >
+            >
             <a href={fbLink} target="_blank" type="button" className="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
               <svg aria-hidden="true"
               focusable="false"
@@ -26,7 +26,7 @@ export default function Card({ title, fbLink, instagramLink, image, text, iconS 
               role="img"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 320 512"
-            >
+              >
               <path
                 fill="currentColor"
                 d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
@@ -34,7 +34,8 @@ export default function Card({ title, fbLink, instagramLink, image, text, iconS 
               </svg>
             </a>
           </div>}
-          {instagramLink === "" ? null : <div
+          {instagramLink === "" ? null : 
+          <div
             className={cn([styles.primaryBadge, styles.badgeAnime])}
           >
             <a href={instagramLink} target="_blank" type="button" className="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">

@@ -31,48 +31,48 @@ export default function Navbar() {
                         </div>
                     </div>
                     <div
-          className={`${
-            open ? 'hidden' : 'hidden'
-          }   w-full lg:inline-flex lg:flex-grow lg:w-auto`}
-        >
-          <div className='lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto'>
-            <Link href='/'>
-              <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-orange-600 hover:text-white '>
-                Home
-              </a>
-            </Link>
-            <Link href='/about-us'>
-              <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-orange-600 hover:text-white'>
-                Chi Siamo
-              </a>
-            </Link>
-            <Link href='/activities'>
-              <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-orange-600 hover:text-white'>
-                Cosa Facciamo
-              </a>
-            </Link>
-            <Link href='/instructors'>
-              <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-orange-600 hover:text-white'>
-                Istruttori
-              </a>
-            </Link>
-            <Link href='/join-us'>
-              <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-orange-600 hover:text-white'>
-                Unisciti a Noi
-              </a>
-            </Link>
-            <Link href='/galleryS'>
-              <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-orange-600 hover:text-white'>
-                Galleria
-              </a>
-            </Link>
-            <Link href='/contacts'>
-              <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-orange-600 hover:text-white'>
-                Contatti
-              </a>
-            </Link>
-          </div>
-        </div>
+                    className={`${
+                        open ? 'hidden' : 'hidden'
+                    }   w-full lg:inline-flex lg:flex-grow lg:w-auto`}
+                    >
+                        <div className='lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto'>
+                            <Link href='/'>
+                            <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-orange-600 hover:text-white '>
+                                Home
+                            </a>
+                            </Link>
+                            <Link href='/about-us'>
+                            <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-orange-600 hover:text-white'>
+                                Chi Siamo
+                            </a>
+                            </Link>
+                            <Link href='/activities'>
+                            <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-orange-600 hover:text-white'>
+                                Cosa Facciamo
+                            </a>
+                            </Link>
+                            <Link href='/instructors'>
+                            <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-orange-600 hover:text-white'>
+                                Istruttori
+                            </a>
+                            </Link>
+                            <Link href='/join-us'>
+                            <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-orange-600 hover:text-white'>
+                                Unisciti a Noi
+                            </a>
+                            </Link>
+                            <Link href='/galleryS'>
+                            <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-orange-600 hover:text-white'>
+                                Galleria
+                            </a>
+                            </Link>
+                            <Link href='/contacts'>
+                            <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-orange-600 hover:text-white'>
+                                Contatti
+                            </a>
+                            </Link>
+                        </div>
+                    </div>
                 </nav>
             </div>
             {/* 
