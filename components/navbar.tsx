@@ -111,7 +111,7 @@ export default function Navbar() {
                             <div className="px-2 pt-2 pb-3">
                                 <Link href='/about-us'>
                                     <a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-orange-600 hover:text-white'>
-                                        About us
+                                        Chi Siamo
                                     </a>
                                 </Link>
                             </div>
