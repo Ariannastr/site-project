@@ -84,7 +84,7 @@ export default function Layout({ children, home }: any) {
           </div>
         </div>
 
-        <div className="text-center p-4" style={{backgroundColor: "rgba(0, 0, 0, 0.2);"}}>
+        <div className="text-center p-4" style={{backgroundColor: "rgba(0, 0, 0, 0.2)"}}>
           © 2022 Copyright: All rights reserved
         </div>
       </footer>
