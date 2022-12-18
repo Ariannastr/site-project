@@ -4,7 +4,7 @@ module.exports = {
   reactStrictMode: false,
   i18n,
   images: {
-    domains: ['static.mydomain.com'],
+    domains: ['static.physio.com'],
     disableStaticImages: true
 },
   
