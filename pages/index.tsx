@@ -13,7 +13,6 @@ import {
   Input,
   Textarea,
 } from "@material-tailwind/react";
-import { UsersIcon } from "@heroicons/react/24/solid";
 import React, { useState } from 'react';
 import Link from 'next/link';
 
