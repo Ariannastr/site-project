@@ -2,21 +2,40 @@ import Head from 'next/head'
 import Layout from '../components/layout'
 import Image from 'next/image'
 import Card from '../components/card'
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
+import { Typography } from '@material-tailwind/react';
 
 export default function Instructors() {
+  const { t } = useTranslation("");
   return (
     <Layout home={false}>
       <Head>
         <title>Istruttori - NCS Agata</title>
       </Head>
-      
-      <div className="aspect-w-16 aspect-h-10">
-        <Image layout='fill' src="/img/myposter.jpg" className="max-w-full h-auto shadow-lg" alt=""/>
-        <div className="absolute w-full py-2.5 top-12 inset-x-0 text-orange-500 text-xl text-center leading-4" style={{top:"42%"}}>
-          <h2 className="font-extrabold leading-tight text-5xl">Istruttori Tecnici</h2>
+      <div className="relative flex h-screen content-center items-center justify-center pt-16 pb-32">
+          <div className="absolute top-0 h-full w-full bg-[url('/img/myposter.jpg')] bg-contain bg-center" />
+            <div className="absolute top-0 h-full w-full bg-black/75 bg-cover bg-center" />
+              <div className="max-w-8xl container relative mx-auto">
+                <div className="flex flex-wrap items-center">
+                  <div className="ml-auto mr-auto w-full px-4 text-center lg:w-8/12">
+                    <Typography
+                      variant="h1"
+                      color="white"
+                      className="mb-6 font-black"
+                    >
+                      Medici.
+                    </Typography>
+                    <Typography variant="lead" color="white" className="opacity-80">
+                      This is a simple example of Page you can build using
+                      Material Tailwind. It features multiple components based on the
+                      Tailwind CSS and Material Design by Google.
+                    </Typography><br/>
+                </div>
+            </div>
+          </div>
         </div>
-
-      </div>
+      
       <br/>
       <div className="text-center px-16">
         <h1 className="font-semibold leading-tight text-5xl">Istruttori</h1>
@@ -54,4 +73,12 @@ export default function Instructors() {
       </div>
     </Layout>
   )
+}
+
+export async function getStaticProps({ locale }: any) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common"])),
+    },
+  };
 }

@@ -5,7 +5,7 @@ export default function Gallery({ photos, onClick }: { photos: string[], onClick
   return (
     <>
       {photos.map((p) => {
-        return <Image key={p} onClick={()=>onClick(p)} src={p} width={100} height={150}></Image>
+        return <Image key={p} alt={""} onClick={()=>onClick(p)} src={p} width={100} height={150}></Image>
       })}
     </>
   )

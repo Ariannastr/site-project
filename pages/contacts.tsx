@@ -6,8 +6,12 @@ import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useRef, useState } from 'react'
 import { AiOutlineMail } from 'react-icons/ai'
 import { FaMapMarkedAlt, FaPhoneSquareAlt } from 'react-icons/fa'
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
+import { Typography } from '@material-tailwind/react'
 
 export default function Contacts() {
+  const { t } = useTranslation("");
   let [isOpen, setIsOpen] = useState(false)
   let completeRef = useRef(null)
 
@@ -24,14 +28,28 @@ export default function Contacts() {
       <Head>
         <title>Contatti - NCS Agata</title>
       </Head>
-      <div className="aspect-w-10 aspect-h-5">
-        <Image layout='fill' src="/img/contact-bg.jpg" className="max-w-full h-auto shadow-lg" alt=""/>
-        <div className="absolute w-full py-2.5 top-12 inset-x-0 text-orange-500 text-xl text-center leading-4">
-          <h2 className="font-extrabold leading-tight text-5xl">Contatti</h2>
-          <p className='pt-2'>Per maggiori informazioni contattaci</p>
+      <div className="relative flex h-screen content-center items-center justify-center pt-16 pb-32">
+          <div className="absolute top-0 h-full w-full bg-[url('/img/contact-bg.jpg')] bg-cover bg-center" />
+            <div className="absolute top-0 h-full w-full bg-black/75 bg-cover bg-center" />
+              <div className="max-w-8xl container relative mx-auto">
+                <div className="flex flex-wrap items-center">
+                  <div className="ml-auto mr-auto w-full px-4 text-center lg:w-8/12">
+                    <Typography
+                      variant="h1"
+                      color="white"
+                      className="mb-6 font-black"
+                    >
+                      About us.
+                    </Typography>
+                    <Typography variant="lead" color="white" className="opacity-80">
+                      This is a simple example of Page you can build using
+                      Material Tailwind. It features multiple components based on the
+                      Tailwind CSS and Material Design by Google.
+                    </Typography><br/>
+                </div>
+            </div>
+          </div>
         </div>
-
-      </div>
       <br/>
       <div className="text-center px-16">
         <div className='card-container'>
@@ -79,7 +97,7 @@ export default function Contacts() {
           onClick={openModal}
           className="px-4 py-2 text-sm font-medium text-white bg-black rounded-md bg-opacity-20 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
         >
-          <Image src={'/img/libro.jpg'} width="250" height="400"></Image>
+          <Image alt={""} src={'/img/libro.jpg'} width="250" height="400"></Image>
         </button>
 
         <Transition appear show={isOpen} as={Fragment}>
@@ -174,4 +192,12 @@ export default function Contacts() {
       
     </Layout>
   )
+}
+
+export async function getStaticProps({ locale }: any) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common"])),
+    },
+  };
 }

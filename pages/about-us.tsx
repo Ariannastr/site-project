@@ -1,22 +1,40 @@
 import Head from 'next/head'
 import Layout from '../components/layout'
 import Image from 'next/image'
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
+import { Typography } from '@material-tailwind/react';
 
 export default function AboutUs() {
+  const { t } = useTranslation("");
   return (
     <Layout home={false}>
       <Head>
         <title>About Us - NCS Agata</title>
       </Head>
-      
-      <div className="aspect-w-10 aspect-h-5">
-        <Image layout='fill' src="/img/noi.jpeg" className="max-w-full h-auto shadow-lg" alt=""/>
-        <div className="absolute w-full py-2.5 top-12 inset-x-0 text-orange-500 text-xl text-center leading-4">
-          <h2 className="font-extrabold leading-tight text-5xl">About Us</h2>
-          <p className='pt-2'>Breve storia</p>
+        <div className="relative flex h-screen content-center items-center justify-center pt-16 pb-32">
+          <div className="absolute top-0 h-full w-full bg-[url('/img/noi.jpeg')] bg-cover bg-center" />
+            <div className="absolute top-0 h-full w-full bg-black/75 bg-cover bg-center" />
+              <div className="max-w-8xl container relative mx-auto">
+                <div className="flex flex-wrap items-center">
+                  <div className="ml-auto mr-auto w-full px-4 text-center lg:w-8/12">
+                    <Typography
+                      variant="h1"
+                      color="white"
+                      className="mb-6 font-black"
+                    >
+                      About us.
+                    </Typography>
+                    <Typography variant="lead" color="white" className="opacity-80">
+                      This is a simple example of Page you can build using
+                      Material Tailwind. It features multiple components based on the
+                      Tailwind CSS and Material Design by Google.
+                    </Typography><br/>
+                </div>
+            </div>
+          </div>
         </div>
 
-      </div>
       <div className="text-center px-16">
         <p className="text-xl font-normal leading-relaxed mt-6 mb-4 text-gray-800">
         Nel 2015 alcune unità cinofile, rimaste orfane del loro istruttore, hanno deciso che tutta la passione, l’amore per il lavoro con i cani e l’esperienza acquisita negli anni non dovevano essere sprecate cosi hanno deciso di fondare il Nucleo Cinofilo da Soccorso Agata.
@@ -41,4 +59,13 @@ export default function AboutUs() {
       
     </Layout>
   )
+}
+
+
+export async function getStaticProps({ locale }: any) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common"])),
+    },
+  };
 }

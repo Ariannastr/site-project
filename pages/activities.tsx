@@ -2,20 +2,38 @@ import Head from 'next/head'
 import Layout from '../components/layout'
 import Image from 'next/image'
 import Tabs from '../components/tabs'
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
+import { Typography } from '@material-tailwind/react';
 
 export default function Activities() {
+  const { t } = useTranslation("");
   return (
     <Layout home={false}>
       <Head>
         <title>Activities - NCS Agata</title>
       </Head>
-      
-      <div className="aspect-w-14 aspect-h-6">
-        <Image layout='fill' src="/img/collage_mod.jpg" className="max-w-full h-auto shadow-lg" alt=""/>
-        <div className=" w-full text-orange-500 text-xl text-center leading-4" style={{top:"40%",  height:"fit-content"}}>
-          <h2 className="font-extrabold leading-tight text-5xl" >Cosa Facciamo</h2>
-        </div>
-
+      <div className="relative flex h-screen content-center items-center justify-center pt-16 pb-32">
+          <div className="absolute top-0 h-full w-full bg-[url('/img/collage_mod.jpg')] bg-contain bg-center" />
+            <div className="absolute top-0 h-full w-full bg-black/75 bg-cover bg-center" />
+              <div className="max-w-8xl container relative mx-auto">
+                <div className="flex flex-wrap items-center">
+                  <div className="ml-auto mr-auto w-full px-4 text-center lg:w-8/12">
+                    <Typography
+                      variant="h1"
+                      color="white"
+                      className="mb-6 font-black"
+                    >
+                      Activities.
+                    </Typography>
+                    <Typography variant="lead" color="white" className="opacity-80">
+                      This is a simple example of Page you can build using
+                      Material Tailwind. It features multiple components based on the
+                      Tailwind CSS and Material Design by Google.
+                    </Typography><br/>
+                </div>
+            </div>
+          </div>
       </div>
       <Tabs title={["Protezione Civile", "Unità Cinofile", "Gruppo Motociclistico"]}
         text={[
@@ -51,4 +69,12 @@ export default function Activities() {
       />
     </Layout>
   )
+}
+
+export async function getStaticProps({ locale }: any) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common"])),
+    },
+  };
 }

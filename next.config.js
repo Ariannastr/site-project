@@ -1,9 +1,8 @@
 /** @type {import('next').NextConfig} */
+const { i18n } = require("./next-i18next.config");
 module.exports = {
   reactStrictMode: false,
-  resolve: {
-    // Add `.ts` and `.tsx` as a resolvable extension.
-    extensions: [".ts", ".tsx", ".js", ".css", ".scss"]
-  },
+  i18n,
+  
   
 }
