@@ -2,9 +2,9 @@ import cn from "classnames";
 import styles from "./card.module.css";
 
 
-export default function Card({ title, fbLink, instagramLink, image, text, iconS } : any){
+export default function Card({ title, fbLink, instagramLink, image, text, iconS, onClick, style } : any){
   return (
-    <div className={cn([styles.wrapper, styles.wrapperAnime])}>
+    <div style={{cursor: style !== "" ? "pointer" : ""}} className={cn([styles.wrapper, styles.wrapperAnime])} onClick={onClick}>
       <div className={styles.header}>
         {image == "" && iconS !== "" ? 
             iconS:

@@ -1,84 +1,107 @@
 import Head from 'next/head'
 import Layout from '../components/layout'
-import Image from 'next/image'
-import Card from '../components/card'
+import Image from "next/image";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import { Typography } from '@material-tailwind/react';
+import { useCallback, useState } from 'react';
+import PhotoAlbum from "react-photo-album";
 
-export default function Instructors() {
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
+
+// import optional lightbox plugins
+import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
+import Slideshow from "yet-another-react-lightbox/plugins/slideshow";
+import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
+import Zoom from "yet-another-react-lightbox/plugins/zoom";
+import "yet-another-react-lightbox/plugins/thumbnails.css";
+import path from 'path';
+import fs from 'fs';
+
+function Instructors(props) {
   const { t } = useTranslation("");
+  const [currentImage, setCurrentImage] = useState(0);
+  const [viewerIsOpen, setViewerIsOpen] = useState(false);
+  const [index, setIndex] = useState(-1);
+
+  const slides = props.photos.map(({ src, key, width, height, images }) => ({
+    src: "/"+src,
+    key,
+    width,
+    height,
+    srcSet: images?.map((image) => ({
+      src: "/"+image.src,
+      width: image.width,
+      height: image.height
+    }))
+  }));
+
+
   return (
     <Layout home={false}>
       <Head>
-        <title>Istruttori - NCS Agata</title>
+        <title>Gallery - SPIKE Physio Sport</title>
       </Head>
-      <div className="relative flex h-screen content-center items-center justify-center pt-16 pb-32">
-          <div className="absolute top-0 h-full w-full bg-[url('/img/myposter.jpg')] bg-contain bg-center" />
-            <div className="absolute top-0 h-full w-full bg-black/75 bg-cover bg-center" />
-              <div className="max-w-8xl container relative mx-auto">
-                <div className="flex flex-wrap items-center">
-                  <div className="ml-auto mr-auto w-full px-4 text-center lg:w-8/12">
-                    <Typography
-                      variant="h1"
-                      color="white"
-                      className="mb-6 font-black"
-                    >
-                      Medici.
-                    </Typography>
-                    <Typography variant="lead" color="white" className="opacity-80">
-                      This is a simple example of Page you can build using
-                      Material Tailwind. It features multiple components based on the
-                      Tailwind CSS and Material Design by Google.
-                    </Typography><br/>
-                </div>
-            </div>
-          </div>
-        </div>
-      
-      <br/>
-      <div className="text-center px-16">
-        <h1 className="font-semibold leading-tight text-5xl">Istruttori</h1>
-        <h4 className="font-normal leading-tight text-2xl">Di seguito gli istruttori abilitati del gruppo</h4><br/>
-        <div className='card-container'>
-          <Card
-              iconS={""}
-              key={"card1"}
-              title={"Mercedes Farina"}
-              instagramLink={"https://instagram.com/mercedes_k9_nora"}
-              fbLink={"https://www.facebook.com/mercedesfarina76"}
-              text="Addestratore ENCI sezione 1, Istruttore e figurante Fedics per cani da soccorso in superficie e macerie, conduttore unitá cinofile da soccorso."
-              image={"/img/mercedes2.jpeg"}
-          />
-          <Card
-            iconS={""}
-            key={"card2"}
-            title={"Valentina Guglielmetti"}
-            instagramLink={"https://instagram.com/guglielmetti.valentina"}
-            fbLink={"https://www.facebook.com/guglielmettivalentina"}
-            text="Addestratore ENCI sezione 1, Istruttore e figurante Fedics per cani da soccorso in superficie e macerie, conduttore unitá cinofile da soccorso."
-            image={"/img/valentina.jpeg"}
-          />
-          <Card
-            iconS={""}
-            key={"card3"}
-            title={"Roberta Bottaro"}
-            instagramLink={"https://instagram.com/roberta_bottaro"}
-            fbLink={"https://www.facebook.com/robertabottaro.k9"}
-            text="Addestratore ENCI sezioni 1 e 3, Istruttore e conduttore unitá cinofile mantrailing e detection. Psicologa, criminologa e pedagogista, ha collaborato con il Laboratorio di Cognizione Animale dell’Università di Trieste dove ha partecipato a diversi studi riguardanti l’olfatto del cane."
-            image={"/img/roberta.jpeg"}
+      <div className="text-center px-16" style={{marginBottom:"10px"}}>
+        <h1 className="font-semibold leading-tight text-5xl" style={{marginBottom:"10px"}}>Gallery</h1>
+        
+        <PhotoAlbum photos={props.photos} layout="rows" targetRowHeight={150} onClick={({ index }) => setIndex(index)} />
+
+        <Lightbox
+            slides={slides}
+            open={index >= 0}
+            index={index}
+            close={() => setIndex(-1)}
+            render={{
+    slide: (image, offset, rect) => {
+      const width = Math.round(Math.min(rect.width, (rect.height / image.height) * image.width));
+      const height = Math.round(Math.min(rect.height, (rect.width / image.width) * image.height));
+
+      return (
+        <div style={{ position: "relative", width, height }}>
+          <Image
+            alt=""
+            src={image}
+            layout="fill"
+            loading="eager"
+            objectFit="contain"
+            draggable={false}
+            sizes={
+              typeof window !== "undefined"
+                ? `${Math.ceil((width / window.innerWidth) * 100)}vw`
+                : `${width}px`
+            }
           />
         </div>
-        <br/>
+      );
+    }
+  }}
+            // enable optional lightbox plugins
+            plugins={[Fullscreen, Slideshow, Thumbnails, Zoom]}
+        />
       </div>
     </Layout>
   )
 }
 
 export async function getStaticProps({ locale }: any) {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ["common"])),
-    },
-  };
+    let galleryS = []
+    const dirRelativeToPublicFolder = 'img/gallery/'
+
+    const dir = path.resolve('./public', dirRelativeToPublicFolder);
+    
+    const filenames = fs.readdirSync(dir);
+    for(let fileN of filenames){
+      galleryS.push( {src:dirRelativeToPublicFolder+fileN,
+        width: 300, height:300})  
+    }
+    return {
+      props: {
+        ...(await serverSideTranslations(locale, ["common"])),
+        photos: galleryS,
+      },
+    };
+  
 }
+
+export default Instructors;

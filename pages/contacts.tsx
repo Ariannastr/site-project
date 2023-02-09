@@ -26,7 +26,7 @@ export default function Contacts() {
     
     <Layout home={false}>
       <Head>
-        <title>Contatti - NCS Agata</title>
+        <title>Contacts - SPIKE Physio Sport</title>
       </Head>
       <div className="relative flex h-screen content-center items-center justify-center pt-16 pb-32">
           <div className="absolute top-0 h-full w-full bg-[url('/img/contact-bg.jpg')] bg-cover bg-center" />
@@ -39,7 +39,7 @@ export default function Contacts() {
                       color="white"
                       className="mb-6 font-black"
                     >
-                      About us.
+                      {t("contacts.Title")}
                     </Typography>
                     <Typography variant="lead" color="white" className="opacity-80">
                       This is a simple example of Page you can build using
@@ -52,9 +52,10 @@ export default function Contacts() {
         </div>
       <br/>
       <div className="text-center px-16">
-        <div className='card-container'>
+        <div className='card-container' style={{marginBottom:"10px"}}>
           <Card
               iconS={<FaMapMarkedAlt size={50}/>}
+              style={""}
               key={"card1"}
               title={"Indirizzo"}
               instagramLink={""}
@@ -64,6 +65,7 @@ export default function Contacts() {
           />
           <Card
             iconS={<AiOutlineMail size={50}/>}
+            style={""}
             key={"card2"}
             title={"Email"}
             instagramLink={""}
@@ -73,6 +75,7 @@ export default function Contacts() {
           />
           <Card
             iconS={<FaPhoneSquareAlt size={50}/> }
+            style={""}
             key={"card3"}
             title={"Telefono"}
             instagramLink={""}
@@ -85,12 +88,7 @@ export default function Contacts() {
         <div className='text-center'>
           <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11396.47082285048!2d8.9320357!3d44.4307477!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xddfaadd6cbbbabe4!2sNucleo%20Cinofilo%20da%20Soccorso%20Agata!5e0!3m2!1sit!2sit!4v1647032326575!5m2!1sit!2sit" width="600" height="450" style={{border:"0", display:"inline", width:"100%"}} allowFullScreen={true} loading="lazy"></iframe>
         </div>
-        <br/><hr/><br/>
-        <h1 className="font-bold leading-tight text-5xl">5x1000</h1>
-        <p className="text-xl font-normal leading-relaxed mt-6 mb-4 text-gray-800">
-            Per chi volesse sostenere l’associazione è possibile devolvere il 5 x 1000 indicando il nostro codice fiscale 95179930102 nella dichiarazione dei redditi oppure facendo offerta libera tramite bonifico bancario IBAN: IT19 E030 6909 6061 0000 0146 660.
-        </p>
-        <br/><hr/><br/>
+ {/*       <br/><hr/><br/>
         <h1 className="font-bold leading-tight text-5xl">Lettura Consigliata</h1><br/>
         <button
           type="button"
@@ -119,8 +117,9 @@ export default function Contacts() {
               >
                 <Dialog.Overlay className="fixed inset-0" />
               </Transition.Child>
-
+  */}
               {/* This element is to trick the browser into centering the modal contents. */}
+{/*
               <span
                 className="inline-block h-screen align-middle"
                 aria-hidden="true"
@@ -187,7 +186,7 @@ export default function Contacts() {
               </Transition.Child>
             </div>
           </Dialog>
-        </Transition>
+</Transition>*/}
       </div><br/>
       
     </Layout>

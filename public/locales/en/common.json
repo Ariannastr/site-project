@@ -1,13 +1,25 @@
 {
     "title": {
-      "Title": "Physiotherapy"
+      "Title": "Spike Physio Sport"
+    },
+    "hours": {
+      "WorkingDays": "Mon-Fri",
+      "HolidayDays":"Sat-Sun",
+      "Ferme":"Closed"
     },
     "home": {
       "Home title": "Latest News",
       "Home description": "Home description",
       "Welcome": "Welcome",
       "to Physiotherapy clinic": "to the Physiotherapy Clinic",
-      "text": "One two three text example"
+      "text": "One two three text example",
+      "Valeurs": "Our Values",
+      "Pratique": "Practice based on scientific evidence",
+      "Soins": "Personalized care",
+      "Recherche": "Researches",
+      "TextOne": "First paragr",
+      "TextTwo": "Second paragr",
+      "TextThree":"Third paragr"
     },
     "about": {
       "About title": "About title",
@@ -16,8 +28,22 @@
     "header": {
       "Home": "Home",
       "About Us": "About Us",
-      "Activities": "Activities",
-      "Doctors": "Doctors",
+      "Activities": "Services",
+      "Gallery": "Gallery",
+      "Contacts": "Contacts"
+    },
+    "equipe": {
+      "AboutUs": "About us",
+      "Title": "Our Team",
+      "Text": "Here after the doctors of the structure"
+    },
+    "services": {
+      "Services": "Services",
+      "PhysioGeneral": "General Physiotherapy",
+      "ReadaptationOrtopedique": "Orthopedic Rehabilitation",
+      "ReadaptationSportive": "Sports Rehabilitation"
+    },
+    "contacts": {
       "Contacts": "Contacts"
     }
   }

@@ -30,7 +30,9 @@
     "react-dom": "18.2.0",
     "react-i18next": "^12.1.1",
     "react-icons": "4.7.1",
-    "react-widgets": "^5.8.4"
+    "react-photo-album": "^2.0.1",
+    "react-widgets": "^5.8.4",
+    "yet-another-react-lightbox": "^2.3.0"
   },
   "devDependencies": {
     "@heroicons/react": "^1.0.6",

@@ -2,16 +2,16 @@ import Head from 'next/head'
 import styles from './layout.module.css'
 import Navbar from './navbar'
 
-export const siteTitle = 'Nucleo Cinofilo da Soccorso Agata'
+export const siteTitle = 'Spike Physio Sport'
 
 export default function Layout({ children, home }: any) {
   return (
     <div className={styles.container}>  
       <Head>
-        <link rel="icon" href="/img/agata.jpg" />
+        <link rel="icon" href="/img/physio/logo.png" />
         <meta
           name="description"
-          content="Nucelo Cinofilo da Soccorso Agata"
+          content="Spike Physio Sport"
         />
         <meta
           property="og:image"
@@ -85,7 +85,7 @@ export default function Layout({ children, home }: any) {
         </div>
 
         <div className="text-center p-4" style={{backgroundColor: "rgba(0, 0, 0, 0.2)"}}>
-          © 2022 Copyright: All rights reserved
+          © 2023 Copyright: All rights reserved
         </div>
       </footer>
     </div>

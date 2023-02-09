@@ -27,7 +27,7 @@ export default function Navbar() {
                         <div className="flex items-center justify-between w-full lg:w-auto">
                             <Link legacyBehavior href='/'>
                                 <a className='inline-flex items-center p-2 mr-4 '>
-                                <img className="w-auto h-8 rounded-full" src="/img/agata.jpg" alt="" />
+                                <img className="w-auto h-8 rounded-full" src="/img/physio/logo.png" alt="" />
                                     <span className=' p-2 text-xl text-white font-bold uppercase tracking-wide'>
                                     {t("title.Title")}
                                     </span>
@@ -65,7 +65,7 @@ export default function Navbar() {
                             </Link>
                             <Link legacyBehavior href='/instructors'>
                             <a style={{ textDecoration: 'none' }} className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-teal-600 hover:text-white'>
-                            {t("header.Doctors")}
+                            {t("header.Gallery")}
                             </a>
                             </Link>
                             <Link legacyBehavior href='/contacts'>

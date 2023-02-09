@@ -4,7 +4,6 @@ import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import Image from 'next/image'
 import {
-  Card,
   CardBody,
   CardHeader,
   Typography,
@@ -15,10 +14,33 @@ import {
 } from "@material-tailwind/react";
 import React, { useState } from 'react';
 import Link from 'next/link';
+import CardHours from '../components/card_hours';
+import Card from '../components/card';
+
 
 export default function Home() {
   const { t } = useTranslation("");
   const [effect, setEffect] = useState(false);
+  const [showFirst, setShowFirst] = useState(false);
+  const [showSecond, setShowSecond] = useState(false);
+  const [showThird, setShowThird] = useState(false);
+
+  const showParagraph = (number:string) => {
+    console.log("qui")
+    if(number === "first"){
+      setShowFirst(true);
+      setShowSecond(false);
+      setShowThird(false);
+    }else if(number === "second"){
+      setShowFirst(false);
+      setShowSecond(true);
+      setShowThird(false);
+    }else if(number === "third"){
+      setShowFirst(false);
+      setShowSecond(false);
+      setShowThird(true);
+    }
+};
 
   return (
     <Layout home>
@@ -36,7 +58,7 @@ export default function Home() {
                 color="white"
                 className="mb-6 font-black"
               >
-                Your story starts with us.
+                SPIKE Physio Sport
               </Typography>
               <Typography variant="lead" color="white" className="opacity-80">
                 This is a simple example of a Landing Page you can build using
@@ -65,12 +87,68 @@ export default function Home() {
         </div>
       </div>
       </div>
-      <div className="text-center px-16">
-        <h1 id="home_title" className="font-semibold leading-tight text-5xl">Home</h1>
-        <h4 className="font-normal leading-tight text-2xl">Di seguito le principali notizie</h4><br/>
+      <div className="text-center px-16" id="home_title" style={{marginBottom:"10px"}}>
+        <div className='card-container' >
+          <CardHours
+              iconS={""}
+              key={"card1"}
+              title={"Spike Physio Sport"}
+              googleLink={"https://www.facebook.com/mercedesfarina76"}
+              text=""
+              image={"/img/physio/logo.png"}
+          />
+          </div>
+          <br/>
+          <h1 style={{marginTop:"20px", marginBottom:"10px"}} className="font-semibold leading-tight text-5xl">{t("home.Valeurs")}</h1>
+          <div className='card-container'>
+          <Card
+              style={{cursor:"pointer"}}
+              onClick={()=>showParagraph("first")}
+              iconS={""}
+              key={"card1"}
+              title={t("home.Pratique")}
+              instagramLink={""}
+              fbLink={""}
+              text=""
+              image={"/img/physio/evidence_base.png"}
+          />
+          <Card
+            onClick={()=>showParagraph("second")}
+            iconS={""}
+            key={"card2"}
+            title={t("home.Soins")}
+            instagramLink={""}
+            fbLink={""}
+            text=""
+            image={"/img/physio/cure.jpg"}
+          />
+          <Card
+            onClick={()=>showParagraph("third")}
+            iconS={""}
+            key={"card3"}
+            title={t("home.Recherche")}
+            instagramLink={""}
+            fbLink={""}
+            text=""
+            image={"/img/physio/ricerca.jpg"}
+          />
+        </div>
+        {showFirst ? 
         <p className="text-xl font-normal leading-relaxed mt-6 mb-4 text-gray-800">
-        {t("home.text")}
-        </p> 
+          {t("home.TextOne")}
+        </p> : null
+        }
+        {showSecond ? 
+        <p className="text-xl font-normal leading-relaxed mt-6 mb-4 text-gray-800">
+          {t("home.TextTwo")}
+        </p> : null
+        }
+        {showThird ? 
+        <p className="text-xl font-normal leading-relaxed mt-6 mb-4 text-gray-800">
+          {t("home.TextThree")}
+        </p> : null
+        }
+        
       </div>
     </Layout>
   )
