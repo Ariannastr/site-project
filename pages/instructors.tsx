@@ -17,11 +17,10 @@ import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 import path from 'path';
 import fs from 'fs';
+import { Typography } from '@material-tailwind/react';
 
 function Instructors(props: any) {
   const { t } = useTranslation("");
-  const [currentImage, setCurrentImage] = useState(0);
-  const [viewerIsOpen, setViewerIsOpen] = useState(false);
   const [index, setIndex] = useState(-1);
 
   const slides = props.photos.map(({ src, key, width, height, images }: any) => ({
@@ -38,10 +37,12 @@ function Instructors(props: any) {
 
 
   return (
+    
     <Layout home={false}>
       <Head>
         <title>Gallery - SPIKE Physio Sport</title>
       </Head>
+      
       <div className="text-center px-16" style={{marginBottom:"10px"}}>
         <h1 className="font-semibold leading-tight text-5xl" style={{marginBottom:"10px"}}>Gallery</h1>
         
@@ -53,29 +54,29 @@ function Instructors(props: any) {
             index={index}
             close={() => setIndex(-1)}
             render={{
-    slide: (image, offset, rect) => {
-      const width = Math.round(Math.min(rect.width, (rect.height / (image.height ? image.height : 1)) * (image.width ? image.width : 1)));
-      const height = Math.round(Math.min(rect.height, (rect.width / (image.width ? image.width : 1)) * (image.height ? image.height : 1)));
+              slide: (image, offset, rect) => {
+                const width = Math.round(Math.min(rect.width, (rect.height / (image.height ? image.height : 1)) * (image.width ? image.width : 1)));
+                const height = Math.round(Math.min(rect.height, (rect.width / (image.width ? image.width : 1)) * (image.height ? image.height : 1)));
 
-      return (
-        <div style={{ position: "relative", width, height }}>
-          <Image
-            alt=""
-            src={image.src}
-            layout="fill"
-            loading="eager"
-            objectFit="contain"
-            draggable={false}
-            sizes={
-              typeof window !== "undefined"
-                ? `${Math.ceil((width / window.innerWidth) * 100)}vw`
-                : `${width}px`
-            }
-          />
-        </div>
-      );
-    }
-  }}
+                return (
+                  <div style={{ position: "relative", width, height }}>
+                    <Image
+                      alt=""
+                      src={image.src}
+                      layout="fill"
+                      loading="eager"
+                      objectFit="contain"
+                      draggable={false}
+                      sizes={
+                        typeof window !== "undefined"
+                          ? `${Math.ceil((width / window.innerWidth) * 100)}vw`
+                          : `${width}px`
+                      }
+                    />
+                  </div>
+                );
+              }
+            }}
             // enable optional lightbox plugins
             plugins={[Fullscreen, Slideshow, Thumbnails, Zoom]}
         />

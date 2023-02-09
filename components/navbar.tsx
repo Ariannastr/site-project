@@ -22,7 +22,7 @@ export default function Navbar() {
         
         <div>
             <div className="relative px-4 pb-2 pt-2 bg-teal-400 sm:px-6 md:px-8">
-                <nav className="relative flex items-center justify-between sm:h-10 lg:justify-start">
+                <nav className="relative flex items-center justify-between sm:h-10 lg:justify-start  max-[406px]:w-max">
                     <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
                         <div className="flex items-center justify-between w-full lg:w-auto">
                             <Link legacyBehavior href='/'>

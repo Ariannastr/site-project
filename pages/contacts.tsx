@@ -39,7 +39,7 @@ export default function Contacts() {
                       color="white"
                       className="mb-6 font-black"
                     >
-                      {t("contacts.Title")}
+                      {t("contacts.Contacts")}
                     </Typography>
                     <Typography variant="lead" color="white" className="opacity-80">
                       This is a simple example of Page you can build using
