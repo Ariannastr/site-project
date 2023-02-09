@@ -4,4 +4,4 @@ Per avviare il progetto in locale: <br/>
     -npm install <br/>
     -npm run dev <br/>
 Sito deployato con Vercel:
-    -https://site-project.vercel.app
+    -https://site-project-pr40ky0zf-ariannastr.vercel.app/
