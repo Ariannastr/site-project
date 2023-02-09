@@ -18,18 +18,18 @@ import "yet-another-react-lightbox/plugins/thumbnails.css";
 import path from 'path';
 import fs from 'fs';
 
-function Instructors(props) {
+function Instructors(props: any) {
   const { t } = useTranslation("");
   const [currentImage, setCurrentImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
   const [index, setIndex] = useState(-1);
 
-  const slides = props.photos.map(({ src, key, width, height, images }) => ({
+  const slides = props.photos.map(({ src, key, width, height, images }: any) => ({
     src: "/"+src,
     key,
     width,
     height,
-    srcSet: images?.map((image) => ({
+    srcSet: images?.map((image: any) => ({
       src: "/"+image.src,
       width: image.width,
       height: image.height
@@ -54,14 +54,14 @@ function Instructors(props) {
             close={() => setIndex(-1)}
             render={{
     slide: (image, offset, rect) => {
-      const width = Math.round(Math.min(rect.width, (rect.height / image.height) * image.width));
-      const height = Math.round(Math.min(rect.height, (rect.width / image.width) * image.height));
+      const width = Math.round(Math.min(rect.width, (rect.height / (image.height ? image.height : 1)) * (image.width ? image.width : 1)));
+      const height = Math.round(Math.min(rect.height, (rect.width / (image.width ? image.width : 1)) * (image.height ? image.height : 1)));
 
       return (
         <div style={{ position: "relative", width, height }}>
           <Image
             alt=""
-            src={image}
+            src={image.src}
             layout="fill"
             loading="eager"
             objectFit="contain"
