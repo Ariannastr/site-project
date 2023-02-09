@@ -112,6 +112,8 @@ export default function Home() {
               text=""
               image={"/img/physio/evidence_base.png"}
           />
+          </div>
+          <div className='card-container'>
           <Card
             onClick={()=>showParagraph("second")}
             iconS={""}
@@ -122,6 +124,8 @@ export default function Home() {
             text=""
             image={"/img/physio/cure.jpg"}
           />
+          </div>
+          <div className='card-container'>
           <Card
             onClick={()=>showParagraph("third")}
             iconS={""}
@@ -132,6 +136,7 @@ export default function Home() {
             text=""
             image={"/img/physio/ricerca.jpg"}
           />
+          
         </div>
         {showFirst ? 
         <p className="text-xl font-normal leading-relaxed mt-6 mb-4 text-gray-800">

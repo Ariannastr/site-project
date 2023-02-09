@@ -94,7 +94,7 @@ export default function Navbar() {
                         <div className="overflow-hidden bg-teal-300 rounded-lg shadow-xs" role="menu" aria-orientation="vertical" aria-labelledby="main-menu">
                             <div className="flex items-center justify-between px-5 pt-4">
                                 <div>
-                                    <img className="w-auto h-10" src="/img/agata.jpg" alt="" />
+                                    <img className="w-auto h-10" src="/img/physio/logo.png" alt="" />
                                 </div>
                                 <div className="-mr-2">
                                     <button onClick={toggleOpenHandler} type="button" className="inline-flex items-center justify-center p-2 text-blue-600 transition duration-150 ease-in-out rounded-md hover:text-blue-800 hover:bg-blue-100 focus:outline-none focus:bg-blue-100 focus:text-blue-500" aria-label="Close menu">
@@ -128,7 +128,7 @@ export default function Navbar() {
                             <div className="px-2 pt-2 pb-3">
                                 <Link legacyBehavior href='/instructors'>
                                     <a style={{ textDecoration: 'none' }} className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-teal-600 hover:text-white'>
-                                    {t("header.Doctors")}
+                                    {t("header.Gallery")}
                                     </a>
                                 </Link>
                             </div>

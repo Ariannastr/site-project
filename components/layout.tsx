@@ -6,12 +6,12 @@ export const siteTitle = 'Spike Physio Sport'
 
 export default function Layout({ children, home }: any) {
   return (
-    <div className={styles.container}>  
+    <div className={styles.container} style={{display:"grid"}}>  
       <Head>
         <link rel="icon" href="/img/physio/logo.png" />
         <meta
           name="description"
-          content="Spike Physio Sport"
+          content="SPIKE Physio Sport"
         />
         <meta
           property="og:image"
