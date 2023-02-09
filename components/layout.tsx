@@ -22,7 +22,7 @@ export default function Layout({ children, home }: any) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className="sticky top-0 z-50 max-[406px]:max-w-max" >
+      <header className="sticky top-0 z-50 " >
         <Navbar />
       </header>
       <main className='relative'>{children}
