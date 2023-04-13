@@ -27,9 +27,7 @@ export default function AboutUs() {
                       {t("equipe.AboutUs")}
                     </Typography>
                     <Typography variant="lead" color="white" className="opacity-80">
-                      This is a simple example of Page you can build using
-                      Material Tailwind. It features multiple components based on the
-                      Tailwind CSS and Material Design by Google.
+                      {t("equipe.Intro")}
                     </Typography><br/>
                 </div>
             </div>
@@ -47,7 +45,7 @@ export default function AboutUs() {
               title={"Enrico Tonon"}
               instagramLink={""}
               fbLink={""}
-              text="Descr breve"
+              text={t("equipe.Chef")}
               image={"/img/physio/avatar.jpg"}
           />
           <Card
@@ -57,19 +55,10 @@ export default function AboutUs() {
             title={"Altro Medico"}
             instagramLink={""}
             fbLink={""}
-            text="Descr breve"
+            text={t("equipe.Physio")}
             image={"/img/physio/avatar.jpg"}
           />
-          <Card
-            style={""}
-            iconS={""}
-            key={"card3"}
-            title={"Altro Medico"}
-            instagramLink={""}
-            fbLink={""}
-            text="Descr breve"
-            image={"/img/physio/avatar.jpg"}
-          />
+          
         </div>
         <br/>
       </div>

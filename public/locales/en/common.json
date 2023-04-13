@@ -8,6 +8,8 @@
       "Ferme":"Closed"
     },
     "home": {
+      "Intro": "State of the art physiotherapy center for personalized treatments.",
+      "Hours": "Opening Time",
       "Home title": "Latest News",
       "Home description": "Home description",
       "Welcome": "Welcome",
@@ -15,11 +17,11 @@
       "text": "One two three text example",
       "Valeurs": "Our Values",
       "Pratique": "Practice based on scientific evidence",
-      "Soins": "Personalized care",
+      "Soins": "Personalized care \n \u00a0",
       "Recherche": "Researches",
-      "TextOne": "First paragr",
-      "TextTwo": "Second paragr",
-      "TextThree":"Third paragr"
+      "TextOne": "Each patient is unique and the response times to a therapy are different too. An important advantage of the personalized rehabilitation process is therefore the possibility of carrying out a program studied on the individuality of the patient to identify the best treatment and ensure maximum functional recovery. Each session is individual and the personalized rehabilitation program offers the possibility of a global intervention for the resolution of the problem, where the patient and his pathology are at the center of our care, from start to finish.",
+      "TextTwo": "Evidence-based physiotherapy is the integration of the best research evidence with clinical experience and patient assessment. Physiotherapy, as a widely recognized health profession, needs to update its method of practice to stay alive in the age of scientific research.",
+      "TextThree":"Research in the health sector is developing more and more and in order to be able to meet ever-increasing needs, it is necessary to attend training courses. Our approach to diagnosis and treatment follows the latest research in the field of physical medicine and rehabilitation."
     },
     "about": {
       "About title": "About title",
@@ -33,6 +35,9 @@
       "Contacts": "Contacts"
     },
     "equipe": {
+      "Chef":"Head of physiotherapy",
+      "Physio": "Physiotherapist",
+      "Intro": "We teach patients how to incorporate bone, joint and muscle healthy movements into their daily routine.",
       "AboutUs": "About us",
       "Title": "Our Team",
       "Text": "Here after the doctors of the structure"

@@ -8,17 +8,19 @@
       "Ferme":"Fermé"
     },
     "home": {
+      "Intro": "Centre de physiothérapie à la pointe de la technologie pour des traitements personnalisés.",
+      "Hours": "Horaire d'Ouverture",
       "Home title": "Test",
       "Home description": "Home description",
       "Welcome": "Bienvenu",
       "to Physiotherapy clinic": "À la clinique de physiothérapie",
       "Valeurs": "Nos Valeurs",
       "Pratique": "Pratique basée sur l'evidence scientifique",
-      "Soins": "Soins personalisés",
+      "Soins": "Soins personalisés \n \u00a0",
       "Recherche": "Recherches et mises à jour continues",
-      "TextOne": "Premier paragr",
-      "TextTwo": "Deuxieme paragr",
-      "TextThree":"Troisieme paragr"
+      "TextOne": "Chaque patient est unique et les temps de réponse à une thérapie est différents aussi. Un avantage important du processus de réadaptation personnalisé est donc la possibilité de réaliser un programme étudié sur l'individualité du patient pour identifier le meilleur traitement et assurer une récupération maximale fonctionnelle. Chaque séance est individuelle et le programme de réadaptation personnalisé offre la possibilité d'une intervention globale pour la résolution du problème, où le patient et sa pathologie sont au centre de nos soins, du début à la fin.",
+      "TextTwo": "La physiothérapie fondée sur des évidence scientifique est l'intégration des meilleures preuves de recherche avec l'expérience clinique et l'évaluation des patients. La physiothérapie, en tant que profession de santé largement reconnue, doit mettre à jour sa méthode de pratique pour rester en vie à l'ère de la recherche scientifique.",
+      "TextThree":"La recherche dans le secteur de la santé se développe de plus en plus et afin de pouvoir répondre à des besoins toujours plus croissants, il est nécessaire de suivre des cours de formation. Notre approche du diagnostic et du traitement suit les dernières recherches dans le domaine de la médecine physique et de la réadaptation."
     },
     "about": {
       "About title": "About title",
@@ -32,6 +34,9 @@
       "Contacts": "Contacts"
     },
     "equipe": {
+      "Chef":"Chef de physiothérapie",
+      "Physio": "Physiothérapeute",
+      "Intro":"Nous enseignons aux patients comment intégrer des mouvements sains à la santé ostéoarticulaire et musculaire dans leur routine quotidienne.",
       "AboutUs": "À Propos de Nous",
       "Title": "Notre équipe",
       "Text": "En dessous les docteurs de la structure"

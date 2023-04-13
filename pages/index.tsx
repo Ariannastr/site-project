@@ -61,9 +61,7 @@ export default function Home() {
                 SPIKE Physio Sport
               </Typography>
               <Typography variant="lead" color="white" className="opacity-80">
-                This is a simple example of a Landing Page you can build using
-                Material Tailwind. It features multiple components based on the
-                Tailwind CSS and Material Design by Google.
+                {t("home.Intro")}
               </Typography><br/>
               <div className="flex justify-center">
               <Link href="#home_title">
@@ -87,7 +85,12 @@ export default function Home() {
         </div>
       </div>
       </div>
-      <div className="text-center px-16" id="home_title" style={{marginBottom:"10px"}}>
+      <div className="relative flex py-5 items-center" id="home_title">
+        <div className="flex-grow border-t border-gray-400"></div>
+        <span className="flex-shrink mx-4 text-gray-400">{t("home.Hours")}</span>
+        <div className="flex-grow border-t border-gray-400"></div>
+      </div>
+      <div className="text-center px-16" style={{marginBottom:"10px"}}>
         <div className='card-container' >
           <CardHours
               iconS={""}
@@ -139,19 +142,25 @@ export default function Home() {
           
         </div>
         {showFirst ? 
-        <p className="text-xl font-normal leading-relaxed mt-6 mb-4 text-gray-800">
+        <div className='border-solid border-2 border-teal-400 rounded-lg bg-stone-100' style={{padding:"8px", marginTop:"5px"}}>
+        <p className=" text-xl text-justify font-normal leading-relaxed mt-6 mb-4 text-gray-800">
           {t("home.TextOne")}
-        </p> : null
+        </p>
+        </div> : null
         }
         {showSecond ? 
-        <p className="text-xl font-normal leading-relaxed mt-6 mb-4 text-gray-800">
+        <div className='border-solid border-2 border-teal-400 rounded-lg bg-stone-100' style={{padding:"8px", marginTop:"5px"}}>
+        <p className=" rounded-lg text-xl text-justify font-normal leading-relaxed mt-6 mb-4 text-gray-800">
           {t("home.TextTwo")}
-        </p> : null
+        </p>
+        </div> : null
         }
         {showThird ? 
-        <p className="text-xl font-normal leading-relaxed mt-6 mb-4 text-gray-800">
+        <div className='border-solid border-2 border-teal-400 rounded-lg bg-stone-100' style={{padding:"8px", marginTop:"5px"}}>
+        <p className=" text-xl text-justify font-normal leading-relaxed mt-6 mb-4 text-gray-800">
           {t("home.TextThree")}
-        </p> : null
+        </p> 
+        </div>: null
         }
         
       </div>
