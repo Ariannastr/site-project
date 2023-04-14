@@ -42,6 +42,18 @@ export default function Home() {
     }
 };
 
+const resetModal = ()=>{
+  if(showFirst){
+    setShowFirst(false);
+  }
+  if(showSecond){
+    setShowSecond(false);
+  }
+  if(showThird){
+    setShowThird(false);
+  }
+}
+
   return (
     <Layout home>
       <Head>
@@ -90,7 +102,7 @@ export default function Home() {
         <span className="flex-shrink mx-4 text-gray-400">{t("home.Hours")}</span>
         <div className="flex-grow border-t border-gray-400"></div>
       </div>
-      <div className="text-center px-16" style={{marginBottom:"10px"}}>
+      <div className="text-center px-16" style={{marginBottom:"50px"}} onClick={() => resetModal()}>
         <div className='card-container' >
           <CardHours
               iconS={""}
@@ -141,26 +153,138 @@ export default function Home() {
           />
           
         </div>
-        {showFirst ? 
-        <div className='border-solid border-2 border-teal-400 rounded-lg bg-stone-100' style={{padding:"8px", marginTop:"5px"}}>
-        <p className=" text-xl text-justify font-normal leading-relaxed mt-6 mb-4 text-gray-800">
-          {t("home.TextOne")}
-        </p>
-        </div> : null
-        }
+        {showFirst ?
+
+        <>
+        <div
+          className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+        >
+          <div className="relative w-auto my-6 mx-auto max-w-3xl">
+            {/*content*/}
+            <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+              {/*header*/}
+              <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
+                <h3 className="text-3xl font-semibold">
+                  {t("home.Pratique")}
+                </h3>
+                <button
+                  className="p-1 ml-auto bg-transparent border-0 text-black float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
+                  onClick={() => setShowFirst(false)}
+                >
+                  <span className="bg-transparent text-black  h-6 w-6 text-2xl block outline-none focus:outline-none">
+                    ×
+                  </span>
+                </button>
+              </div>
+              {/*body*/}
+              <div className="relative p-6 flex-auto">
+                <p className="my-4 text-slate-500 text-lg leading-relaxed">
+                {t("home.TextOne")}
+                </p>
+              </div>
+              {/*footer*/}
+              <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
+                <button
+                  className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                  type="button"
+                  onClick={() => setShowFirst(false)}
+                >
+                  {t("home.Close")}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
+        </>
+        : null}
         {showSecond ? 
-        <div className='border-solid border-2 border-teal-400 rounded-lg bg-stone-100' style={{padding:"8px", marginTop:"5px"}}>
-        <p className=" rounded-lg text-xl text-justify font-normal leading-relaxed mt-6 mb-4 text-gray-800">
-          {t("home.TextTwo")}
-        </p>
-        </div> : null
+        <>
+        <div
+          className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+        >
+          <div className="relative w-auto my-6 mx-auto max-w-3xl">
+            {/*content*/}
+            <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+              {/*header*/}
+              <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
+                <h3 className="text-3xl font-semibold">
+                {t("home.Soins")}
+                </h3>
+                <button
+                  className="p-1 ml-auto bg-transparent border-0 text-black float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
+                  onClick={() => setShowFirst(false)}
+                >
+                  <span className="bg-transparent text-black  h-6 w-6 text-2xl block outline-none focus:outline-none">
+                    ×
+                  </span>
+                </button>
+              </div>
+              {/*body*/}
+              <div className="relative p-6 flex-auto">
+                <p className="my-4 text-slate-500 text-lg leading-relaxed">
+                {t("home.TextTwo")}
+                </p>
+              </div>
+              {/*footer*/}
+              <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
+                <button
+                  className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                  type="button"
+                  onClick={() => setShowFirst(false)}
+                >
+                  {t("home.Close")}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
+        </> : null
         }
         {showThird ? 
-        <div className='border-solid border-2 border-teal-400 rounded-lg bg-stone-100' style={{padding:"8px", marginTop:"5px"}}>
-        <p className=" text-xl text-justify font-normal leading-relaxed mt-6 mb-4 text-gray-800">
-          {t("home.TextThree")}
-        </p> 
-        </div>: null
+          <>
+          <div
+            className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+          >
+            <div className="relative w-auto my-6 mx-auto max-w-3xl">
+              {/*content*/}
+              <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+                {/*header*/}
+                <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
+                  <h3 className="text-3xl font-semibold">
+                  {t("home.Recherche")}
+                  </h3>
+                  <button
+                    className="p-1 ml-auto bg-transparent border-0 text-black float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
+                    onClick={() => setShowFirst(false)}
+                  >
+                    <span className="bg-transparent text-black  h-6 w-6 text-2xl block outline-none focus:outline-none">
+                      ×
+                    </span>
+                  </button>
+                </div>
+                {/*body*/}
+                <div className="relative p-6 flex-auto">
+                  <p className="my-4 text-slate-500 text-lg leading-relaxed">
+                  {t("home.TextThree")}
+                  </p>
+                </div>
+                {/*footer*/}
+                <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
+                  <button
+                    className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    type="button"
+                    onClick={() => setShowFirst(false)}
+                  >
+                    {t("home.Close")}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
+          </>: null
         }
         
       </div>
