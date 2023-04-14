@@ -177,7 +177,7 @@ const resetModal = ()=>{
                 </button>
               </div>
               {/*body*/}
-              <div className="relative p-6 flex-auto">
+              <div className="relative p-6 flex-auto" style={{ maxHeight:"300px", overflowY:"auto"}}>
                 <p className="my-4 text-slate-500 text-lg leading-relaxed">
                 {t("home.TextOne")}
                 </p>
@@ -221,7 +221,7 @@ const resetModal = ()=>{
                 </button>
               </div>
               {/*body*/}
-              <div className="relative p-6 flex-auto">
+              <div className="relative p-6 flex-auto" style={{ maxHeight:"300px", overflowY:"auto"}}>
                 <p className="my-4 text-slate-500 text-lg leading-relaxed">
                 {t("home.TextTwo")}
                 </p>
@@ -265,7 +265,7 @@ const resetModal = ()=>{
                   </button>
                 </div>
                 {/*body*/}
-                <div className="relative p-6 flex-auto">
+                <div className="relative p-6 flex-auto" style={{ maxHeight:"300px", overflowY:"auto"}}>
                   <p className="my-4 text-slate-500 text-lg leading-relaxed">
                   {t("home.TextThree")}
                   </p>

@@ -111,6 +111,7 @@ export default function Activities() {
   return (
     <Layout home={false}>
       <Head>
+        
         <title>Services - SPIKE Physio Sport</title>
       </Head>
       <div className="relative flex h-screen content-center items-center justify-center pt-16 pb-32">
@@ -158,25 +159,24 @@ export default function Activities() {
                 </button>
                 {openOne ? 
                   <>
-                  
                     <hr className="border-gray-300 dark:border-gray-700"/>
                     <div className="grid grid-cols-3 gap-3 p-5">
                       <button 
-                          className="bg-teal-500 text-white active:bg-teal-600 hover:bg-teal-700 font-bold uppercase text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                          className="overflow-hidden bg-teal-500 text-white active:bg-teal-600 hover:bg-teal-700 font-bold uppercase text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                           type="button"
                           onClick={() => setShowReadaptOrt(true)}
                         >
                         {t("services.ReadaptOrtop")}
                       </button>
                       <button 
-                          className="bg-teal-500 text-white active:bg-teal-600 hover:bg-teal-700 font-bold uppercase text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                          className="overflow-hidden bg-teal-500 text-white active:bg-teal-600 hover:bg-teal-700 font-bold uppercase text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                           type="button"
                           onClick={() => setShowReadaptSport(true)}
                         >
                         {t("services.ReadaptSportive")}
                       </button>
                       <button 
-                          className="bg-teal-500 text-white active:bg-teal-600 hover:bg-teal-700 font-bold uppercase text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                          className="overflow-hidden bg-teal-500 text-white active:bg-teal-600 hover:bg-teal-700 font-bold uppercase text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                           type="button"
                           onClick={() => setShowReadaptResp(true)}
                         >
@@ -210,21 +210,21 @@ export default function Activities() {
                   <hr className="border-gray-300 dark:border-gray-700"/>
                   <div className="grid grid-cols-3 gap-4 p-5">
                     <button 
-                        className="bg-teal-500 text-white active:bg-teal-600 hover:bg-teal-700 font-bold uppercase text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                        className="overflow-hidden bg-teal-500 text-white active:bg-teal-600 hover:bg-teal-700 font-bold uppercase text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                         type="button"
                         onClick={() => setShowManipVert(true)}
                       >
                       {t("services.ManipVert")}
                     </button>
                     <button 
-                        className="bg-teal-500 text-white active:bg-teal-600 hover:bg-teal-700 font-bold uppercase text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                        className="overflow-hidden bg-teal-500 text-white active:bg-teal-600 hover:bg-teal-700 font-bold uppercase text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                         type="button"
                         onClick={() => setShowManipReedP(true)}
                       >
                       {t("services.ReeducPost")}
                     </button>
                     <button 
-                        className="bg-teal-500 text-white active:bg-teal-600 hover:bg-teal-700 font-bold uppercase text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                        className="overflow-hidden bg-teal-500 text-white active:bg-teal-600 hover:bg-teal-700 font-bold uppercase text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                         type="button"
                         onClick={() => setShowMassoT(true)}
                       >
@@ -235,21 +235,21 @@ export default function Activities() {
 
                     <div className="grid grid-cols-3 gap-4 p-5">
                     <button 
-                        className="bg-teal-500 text-white active:bg-teal-600 hover:bg-teal-700 font-bold uppercase text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                        className="overflow-hidden bg-teal-500 text-white active:bg-teal-600 hover:bg-teal-700 font-bold uppercase text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                         type="button"
                         onClick={() => setShowTechnPomp(true)}
                       >
                       {t("services.TechnPomp")}
                     </button>
                     <button 
-                        className=" bg-teal-500 text-white active:bg-teal-600 hover:bg-teal-700 font-bold uppercase text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                        className="overflow-hidden bg-teal-500 text-white active:bg-teal-600 hover:bg-teal-700 font-bold uppercase text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                         type="button"
                         onClick={() => setShowTriggerP(true)}
                       >
                       {t("services.TriggerP")}
                     </button>
                     <button 
-                        className="bg-teal-500 text-white active:bg-teal-600 hover:bg-teal-700 font-bold uppercase text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                        className="overflow-hidden bg-teal-500 text-white active:bg-teal-600 hover:bg-teal-700 font-bold uppercase text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                         type="button"
                         onClick={() => setShowDrainage(true)}
                       >
@@ -258,7 +258,7 @@ export default function Activities() {
                     </div>
                     <div className="grid grid-cols-3 gap-4 p-5">
                     <button 
-                        className="col-start-2 bg-teal-500 text-white active:bg-teal-600 hover:bg-teal-700 font-bold uppercase text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                        className="overflow-hidden col-start-2 bg-teal-500 text-white active:bg-teal-600 hover:bg-teal-700 font-bold uppercase text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                         type="button"
                         onClick={() => setShowKinesio(true)}
                       >
@@ -291,40 +291,40 @@ export default function Activities() {
                 {openThree ? 
                   <>
                     <hr className="border-gray-300 dark:border-gray-700"/>
-                  <div className="grid grid-cols-4 gap-4 p-5">
+                  <div className="grid grid-cols-3 gap-4 p-5">
                     <button 
-                        className="bg-teal-500 text-white active:bg-teal-600 hover:bg-teal-700 font-bold uppercase text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                        className="overflow-hidden bg-teal-500 text-white active:bg-teal-600 hover:bg-teal-700 font-bold uppercase text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                         type="button"
                         onClick={() => setShowTecar(true)}
                       >
                       {t("services.Tecar")}
                     </button>
                     <button 
-                        className="bg-teal-500 text-white active:bg-teal-600 hover:bg-teal-700 font-bold uppercase text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                        className="overflow-hidden bg-teal-500 text-white active:bg-teal-600 hover:bg-teal-700 font-bold uppercase text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                         type="button"
                         onClick={() => setShowUltrason(true)}
                       >
                       {t("services.Ultrason")}
                     </button>
                     <button 
-                        className="bg-teal-500 text-white active:bg-teal-600 hover:bg-teal-700 font-bold uppercase text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                        className="overflow-hidden bg-teal-500 text-white active:bg-teal-600 hover:bg-teal-700 font-bold uppercase text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                         type="button"
                         onClick={() => setShowElectrSt(true)}
                       >
                       {t("services.ElectrSt")}
                     </button>
+                   
+                    </div>
+                    <div className="grid grid-cols-4 gap-3 p-5">
                     <button 
-                        className="bg-teal-500 text-white active:bg-teal-600 hover:bg-teal-700 font-bold uppercase text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                        className="overflow-hidden col-start-2 bg-teal-500 text-white active:bg-teal-600 hover:bg-teal-700 font-bold uppercase text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                         type="button"
                         onClick={() => setShowMagneto(true)}
                       >
                       {t("services.Magneto")}
                     </button>
-                   
-                    </div>
-                    <div className="grid grid-cols-3 gap-4 p-5">
                     <button 
-                        className="col-start-2 bg-teal-500 text-white active:bg-teal-600 hover:bg-teal-700 font-bold uppercase text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                        className="overflow-hidden bg-teal-500 text-white active:bg-teal-600 hover:bg-teal-700 font-bold uppercase text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                         type="button"
                         onClick={() => setShowOnde(true)}
                       >
