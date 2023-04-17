@@ -33,6 +33,7 @@ export default function Activities() {
   const [showMagneto, setShowMagneto] = useState(false);
   const [showOnde, setShowOnde] = useState(false);
   const [showReadaptResp, setShowReadaptResp] = useState(false);
+  const [showMatrix, setShowMatrix] = useState(false);
  
   const handleOpen = (value: any) => {
     if(value === "one"){
@@ -101,6 +102,10 @@ export default function Activities() {
       setShowMagneto(false);
       setOpenThree(true);
     }
+    if(showMatrix){
+      setShowMatrix(false);
+      setOpenThree(true);
+    }
     if(showOnde){
       setShowOnde(false);
       setOpenThree(true);
@@ -160,7 +165,7 @@ export default function Activities() {
                 {openOne ? 
                   <>
                     <hr className="border-gray-300 dark:border-gray-700"/>
-                    <div className="grid grid-cols-3 gap-3 p-5">
+                    <div className="grid grid-cols-3 xs:grid-cols-1 grid-flow-dense gap-3 p-5">
                       <button 
                           className="overflow-hidden bg-teal-500 text-white active:bg-teal-600 hover:bg-teal-700 font-bold uppercase text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                           type="button"
@@ -189,7 +194,7 @@ export default function Activities() {
 
             <div className="bg-teal-100 border-2 border-gray-100 rounded-lg dark:border-gray-700" onClick={()=>handleOpen("two")}>
                 <button className="flex items-center justify-between w-full p-8">
-                    <h1 className="font-semibold text-gray-700 dark:text-white">{t("services.ReadaptationOrtopedique")}</h1>
+                    <h1 className="font-semibold text-gray-700 dark:text-white">{t("services.TechnUt")}</h1>
 
                     {openTwo ? 
                       <span className="text-gray-500 bg-gray-300 rounded-full">
@@ -208,7 +213,7 @@ export default function Activities() {
                 {openTwo ? 
                 <>
                   <hr className="border-gray-300 dark:border-gray-700"/>
-                  <div className="grid grid-cols-3 gap-4 p-5">
+                  <div className="grid grid-cols-3 xs:grid-cols-1 gap-4 p-5">
                     <button 
                         className="overflow-hidden bg-teal-500 text-white active:bg-teal-600 hover:bg-teal-700 font-bold uppercase text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                         type="button"
@@ -230,10 +235,6 @@ export default function Activities() {
                       >
                       {t("services.Massot")}
                     </button>
-                   
-                    </div>
-
-                    <div className="grid grid-cols-3 gap-4 p-5">
                     <button 
                         className="overflow-hidden bg-teal-500 text-white active:bg-teal-600 hover:bg-teal-700 font-bold uppercase text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                         type="button"
@@ -255,16 +256,13 @@ export default function Activities() {
                       >
                       {t("services.Drainage")}
                     </button>
-                    </div>
-                    <div className="grid grid-cols-3 gap-4 p-5">
                     <button 
-                        className="overflow-hidden col-start-2 bg-teal-500 text-white active:bg-teal-600 hover:bg-teal-700 font-bold uppercase text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                        className="overflow-hidden col-start-2 xs:col-start-1 bg-teal-500 text-white active:bg-teal-600 hover:bg-teal-700 font-bold uppercase text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                         type="button"
                         onClick={() => setShowKinesio(true)}
                       >
                       {t("services.Kinesio")}
                     </button>
-                  
                     </div>
                 </> : null
                   }
@@ -291,7 +289,7 @@ export default function Activities() {
                 {openThree ? 
                   <>
                     <hr className="border-gray-300 dark:border-gray-700"/>
-                  <div className="grid grid-cols-3 gap-4 p-5">
+                  <div className="grid grid-cols-3 xs:grid-cols-1 gap-4 p-5">
                     <button 
                         className="overflow-hidden bg-teal-500 text-white active:bg-teal-600 hover:bg-teal-700 font-bold uppercase text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                         type="button"
@@ -313,11 +311,8 @@ export default function Activities() {
                       >
                       {t("services.ElectrSt")}
                     </button>
-                   
-                    </div>
-                    <div className="grid grid-cols-4 gap-3 p-5">
                     <button 
-                        className="overflow-hidden col-start-2 bg-teal-500 text-white active:bg-teal-600 hover:bg-teal-700 font-bold uppercase text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                        className="overflow-hidden bg-teal-500 text-white active:bg-teal-600 hover:bg-teal-700 font-bold uppercase text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                         type="button"
                         onClick={() => setShowMagneto(true)}
                       >
@@ -330,7 +325,16 @@ export default function Activities() {
                       >
                       {t("services.Onde")}
                     </button>
+                    <button 
+                        className="overflow-hidden bg-teal-500 text-white active:bg-teal-600 hover:bg-teal-700 font-bold uppercase text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                        type="button"
+                        onClick={() => setShowMatrix(true)}
+                      >
+                      {t("services.Matrix")}
+                    </button>
+                   
                     </div>
+                    
                   </> : null
                   }
             </div>
@@ -1012,6 +1016,50 @@ export default function Activities() {
                     className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
                     onClick={() => setShowOnde(false)}
+                  >
+                    {t("home.Close")}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
+        </>
+      ) : null}
+  {showMatrix ? (
+        <>
+          <div
+            className=" justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+          >
+            <div className="relative w-auto my-6 mx-auto max-w-3xl " style={{maxHeight: "inherit"}}>
+              {/*content*/}
+              <div style={{maxHeight: "inherit"}} className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+                {/*header*/}
+                <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
+                  <h3 className="text-lg font-semibold">
+                    {t("services.Matrix")}
+                  </h3>
+                  <button
+                    className="p-1 ml-auto bg-transparent border-0 text-black float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
+                    onClick={() => setShowMatrix(false)}
+                  >
+                    <span className="bg-transparent text-black  h-6 w-6 text-2xl block outline-none focus:outline-none">
+                      ×
+                    </span>
+                  </button>
+                </div>
+                {/*body*/}
+                <div className="relative p-6 flex-auto " style={{ maxHeight:"300px", overflowY:"auto"}}>
+                  <p className="my-4 text-slate-500 text-justify text-sm leading-relaxed">
+                    {t("services.MatrixText")}
+                  </p>
+                </div>
+                {/*footer*/}
+                <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
+                  <button
+                    className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    type="button"
+                    onClick={() => setShowMatrix(false)}
                   >
                     {t("home.Close")}
                   </button>

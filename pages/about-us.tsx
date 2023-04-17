@@ -36,7 +36,7 @@ export default function AboutUs() {
 
       <div className="text-center px-16" style={{marginBottom:"10px"}}>
       <h1 className="font-semibold leading-tight text-5xl">{t("equipe.Title")}</h1>
-        <h4 className="font-normal leading-tight text-2xl">{t("equipe.Text")}</h4><br/>
+        <h4 className="font-normal leading-tight text-2xl"></h4><br/>
         <div className='card-container'>
           <Card
               iconS={""}
@@ -52,7 +52,7 @@ export default function AboutUs() {
             style={""}
             iconS={""}
             key={"card2"}
-            title={"Altro Medico"}
+            title={"Nathan Blondin"}
             instagramLink={""}
             fbLink={""}
             text={t("equipe.Physio")}

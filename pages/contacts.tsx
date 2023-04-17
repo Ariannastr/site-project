@@ -42,9 +42,7 @@ export default function Contacts() {
                       {t("contacts.Contacts")}
                     </Typography>
                     <Typography variant="lead" color="white" className="opacity-80">
-                      This is a simple example of Page you can build using
-                      Material Tailwind. It features multiple components based on the
-                      Tailwind CSS and Material Design by Google.
+                      {t("contacts.Intro")}
                     </Typography><br/>
                 </div>
             </div>
@@ -60,7 +58,7 @@ export default function Contacts() {
               title={"Indirizzo"}
               instagramLink={""}
               fbLink={""}
-              text={"Via Del Peralto 2 - Righi, 16136 GENOVA"}
+              text={"Route de Lausanne 1, 1303 Penthaz, REZ"}
               image={""}
           />
           <Card
@@ -86,7 +84,7 @@ export default function Contacts() {
         </div>
         <br/><hr/><br/>
         <div className='text-center'>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11396.47082285048!2d8.9320357!3d44.4307477!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xddfaadd6cbbbabe4!2sNucleo%20Cinofilo%20da%20Soccorso%20Agata!5e0!3m2!1sit!2sit!4v1647032326575!5m2!1sit!2sit" width="600" height="450" style={{border:"0", display:"inline", width:"100%"}} allowFullScreen={true} loading="lazy"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2741.3996128608487!2d6.53671657502916!3d46.59910515700686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c347de4677815%3A0x5f47f2b80d6d3099!2sRte%20de%20Lausanne%201%2C%201303%20Penthaz%2C%20Svizzera!5e0!3m2!1sit!2sit!4v1681717725140!5m2!1sit!2sit" width="600" height="450" style={{border:"0", display:"inline", width:"100%"}} allowFullScreen={true} loading="lazy"></iframe>
         </div>
  {/*       <br/><hr/><br/>
         <h1 className="font-bold leading-tight text-5xl">Lettura Consigliata</h1><br/>

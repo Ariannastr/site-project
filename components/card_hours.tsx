@@ -33,7 +33,7 @@ export default function CardHours({ title, googleLink, image, text, iconS } : an
         <h1 className={styles.text}>{` ${title}`}</h1><br/>
         <hr/>
         <p style={{textAlign:"left", float:"left"}} className="text-gray-600 text-s">{t("hours.WorkingDays")}</p>
-        <p style={{textAlign:"right"}} className="text-gray-600 text-s">7:30-19:30</p>
+        <p style={{textAlign:"right"}} className="text-gray-600 text-s">8:30-19</p>
         <hr/>
         <p style={{textAlign:"left", float:"left"}} className="text-gray-600 text-s">{t("hours.HolidayDays")}</p>
         <p style={{textAlign:"right"}} className="text-gray-600 text-s">{t("hours.Ferme")}</p>

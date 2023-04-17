@@ -64,11 +64,11 @@ export default function Navbar() {
                             </a>
                             </Link>
                             <Link legacyBehavior href='/instructors'>
-                            <a style={{ textDecoration: 'none' }} className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-teal-600 hover:text-white'>
+                            {/*<a style={{ textDecoration: 'none' }} className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-teal-600 hover:text-white'>
                             {t("header.Gallery")}
                             </a>
                             </Link>
-                            <Link legacyBehavior href='/contacts'>
+                            <Link legacyBehavior href='/contacts'>*/}
                             <a style={{ textDecoration: 'none' }} className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-teal-600 hover:text-white'>
                             {t("header.Contacts")}
                             </a>
@@ -125,13 +125,13 @@ export default function Navbar() {
                                     </a>
                                 </Link>
                             </div>
-                            <div className="px-2 pt-2 pb-3">
+                           {/* <div className="px-2 pt-2 pb-3">
                                 <Link legacyBehavior href='/instructors'>
                                     <a style={{ textDecoration: 'none' }} className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-teal-600 hover:text-white'>
                                     {t("header.Gallery")}
                                     </a>
                                 </Link>
-                            </div>
+                            </div>*/}
                             <div className="px-2 pt-2 pb-3">
                                 <Link legacyBehavior href='/contacts'>
                                     <a style={{ textDecoration: 'none' }} className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-teal-600 hover:text-white'>
